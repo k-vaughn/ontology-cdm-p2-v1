@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/isoiec5087-2/v1/"
-     xml:base="https://w3id.org/isoiec5087-2/v1/"
+<rdf:RDF xmlns="https://w3id.org/citydata/part2/v1/"
+     xml:base="https://w3id.org/citydata/part2/v1/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -10,13 +10,13 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-    <owl:Ontology rdf:about="https://w3id.org/isoiec5087-2/v1/Core">
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part2/v1/Core">
         <!-- Identity -->
         <dcterms:title>Information technology - City data model - Part 2: City level concepts - Core concepts</dcterms:title>
         <rdfs:seeAlso rdf:resource="https://www.iso.org/standard/80742.html"/>
         <dcterms:bibliographicCitation>ISO/IEC 5087-2:2024</dcterms:bibliographicCitation>
     	<skos:definition>This ontology specifies the city-level concepts that are used by all other patterns of the city-level portion of the city data model.</skos:definition>
-    	<vann:preferredNamespaceUri>https://w3id.org/isoiec5087-2/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespaceUri>https://w3id.org/citydata/part2/v1/</vann:preferredNamespaceUri>
     	<vann:preferredNamespacePrefix>cdm2</vann:preferredNamespacePrefix>
 
     	<!-- Provenance -->
@@ -27,13 +27,13 @@
         <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-11</owl:priorVersion> <!-- Date of prior ontology file, if any -->
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-27</dcterms:modified> <!-- Date of this ontology file -->
         <owl:versionInfo>1.3.0</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://w3id.org/isoiec5087-2/v1/r3.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part2/v1/r3.0"/>
         
         <!-- License -->
         <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
         
         <!-- Imports -->
-        <owl:imports rdf:resource="https://w3id.org/isoiec5087-1/v1/Core"/>
+        <owl:imports rdf:resource="https://w3id.org/citydata/part1/v1/Core"/>
 
     </owl:Ontology>
     
@@ -46,11 +46,11 @@
      -->
 
 
-    <!-- https://w3id.org/isoiec5087-2/v1/CityObjectProperty -->
+    <!-- https://w3id.org/citydata/part2/v1/CityObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityObjectProperty">
+    <owl:ObjectProperty rdf:about="https://w3id.org/citydata/part2/v1/CityObjectProperty">
         <skos:definition>Added for organizational purposes, to identify object properties defined for city-level CDM ontology.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-1/v1/CdmObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part1/v1/CdmObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -63,11 +63,11 @@
      -->
 
 
-    <!-- https://w3id.org/isoiec5087-2/v1/CityDataProperty -->
+    <!-- https://w3id.org/citydata/part2/v1/CityDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityDataProperty">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/citydata/part2/v1/CityDataProperty">
         <skos:definition>Added for organizational purposes, to identify data properties defined for city-level CDM ontology.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-1/v1/CdmDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/citydata/part1/v1/CdmDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -80,10 +80,10 @@
      -->
 
      
-    <!-- https://w3id.org/isoiec5087-2/v1/CityThing -->
+    <!-- https://w3id.org/citydata/part2/v1/CityThing -->
 
-    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/CityThing">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-1/v1/CdmThing"/>
+    <owl:Class rdf:about="https://w3id.org/citydata/part2/v1/CityThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part1/v1/CdmThing"/>
         <skos:definition>Added for organizational purposes, to identify classes defined for the city-level CDM ontology.</skos:definition>
     </owl:Class>
     
