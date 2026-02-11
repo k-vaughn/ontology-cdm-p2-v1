@@ -26,7 +26,7 @@
         <dcterms:creator>Mark Fox</dcterms:creator>
     	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024</dcterms:issued> <!-- Date of the source document, comment out if draft -->
-        <owl:priorVersion rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building/"/>
+        <owl:priorVersion rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Bylaw/"/>
         <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-11</owl:priorVersion> <!-- Date of prior ontology file, if any -->
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-08</dcterms:modified> <!-- Date of this ontology file -->
         <owl:versionInfo>1.3.0</owl:versionInfo>
@@ -452,38 +452,40 @@
     <!-- https://w3id.org/isoiec5087-2/v1/Definition -->
 
     <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/Definition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BylawOntologyThing"/>
+        <skos:definition>A definition is a statement that explains the meaning of a term or concept as used within the domain object (e.g., a document).</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BylawThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#properPartOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-1/v1/properPartOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/isoiec5087-2/v1/Law"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasDescription"/>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-1/v1/hasDescription"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#hasName"/>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-1/v1/hasName"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
+
+    <!-- Issue: Jurisdictional Area defined in city.owl but extended here to avoid circular loop -->
     <!-- https://w3id.org/isoiec5087-2/v1/JurisdictionalArea -->
-     <!-- Extending the class here to avoid circular loop -->
 
     <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Bylaw#hasBylaw"/>
-                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Bylaw#Bylaw"/>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-2/v1/hasBylaw"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-2/v1/Bylaw"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>

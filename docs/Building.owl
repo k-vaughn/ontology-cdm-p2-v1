@@ -37,8 +37,6 @@
         <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
         
         <!-- Imports -->
-        <owl:imports rdf:resource="https://w3id.org/isoiec5087-1/v1/ChangePattern"/>
-        <owl:imports rdf:resource="https://w3id.org/isoiec5087-2/v1/ContactPattern"/>
         <owl:imports rdf:resource="https://w3id.org/isoiec5087-2/v1/InfrastructurePattern"/>
     </owl:Ontology>
     
@@ -326,6 +324,22 @@
     </owl:Class>
     
 
+    <!-- https://w3id.org/isoiec5087-2/v1/AreaRatio -->
+
+    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/AreaRatio">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BuildingThing"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/isoiec21972/v1/RatioIndicator"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec21972/v1/denominator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-1/v1/Area"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/isoiec21972/v1/numerator"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-1/v1/Area"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
 
 
     <!-- https://w3id.org/isoiec5087-2/v1/Building -->
@@ -557,6 +571,7 @@
     <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/Facility">
         <skos:definition>A facility is a physical location or structure that provides services or amenities to the public or a specific group of people.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/InfrastructureElement"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BuildingThing"/>
         <!-- Issue: The hasLocation property is defined as max 1 Location in ISO/IEC 5087-2 rather than exactly 1 Location. Recommend changing to max 1 as it may be mobile and undesirable to show a location. -->
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -567,5 +582,50 @@
         </rdfs:subClassOf>
     </owl:Class>
 
+
+<!--  https://w3id.org/isoiec5087-2/v1/Year -->
+    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/Year">
+        <skos:definition>Represents a year in the Gregorian calendar.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BuildingThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+</owl:Class>
+
+<!--    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/Year">
+        <skos:definition>Represents a year in the Gregorian calendar.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/BuildingThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#DateTimeDescription"/>
+        <rdfs:subClassOf>
+            // time:day exactly 0 
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#day"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gDay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            // time:month exactly 0
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#month"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gMonth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            // time:year min 1
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#year"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            // time:year max 1 (with min 1, equivalent to exactly 1)
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#year"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>  -->
 
 </rdf:RDF>

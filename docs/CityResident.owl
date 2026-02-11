@@ -26,7 +26,7 @@
         <dcterms:creator>Mark Fox</dcterms:creator>
     	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024</dcterms:issued> <!-- Date of the source document, comment out if draft -->
-        <owl:priorVersion rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Building/"/>
+        <owl:priorVersion rdf:resource="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityResident/"/>
         <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-11</owl:priorVersion> <!-- Date of prior ontology file, if any -->
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-08</dcterms:modified> <!-- Date of this ontology file -->
         <owl:versionInfo>1.3.0</owl:versionInfo>
@@ -39,7 +39,6 @@
         <!-- Imports -->
         <owl:imports rdf:resource="https://w3id.org/isoiec5087-2/v1/BuildingPattern"/>
         <owl:imports rdf:resource="https://w3id.org/isoiec5087-2/v1/OrganizationPattern"/>
-        <owl:imports rdf:resource="https://w3id.org/isoiec5087-2/v1/PersonPattern"/>
     </owl:Ontology>
     
 

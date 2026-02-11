@@ -12,12 +12,12 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:i72="https://w3id.org/isoiec21972/v1/"
      xmlns:cdm1="https://w3id.org/isoiec5087-1/v1/">
-    <owl:Ontology rdf:about="https://w3id.org/isoiec5087-2/v1/CityPattern">
+    <owl:Ontology rdf:about="https://w3id.org/isoiec5087-2/v1/ContactPattern">
         <!-- Identity -->
-        <dcterms:title>Information technology - City data model - Part 2: City level concepts - City pattern</dcterms:title>
+        <dcterms:title>Information technology - City data model - Part 2: City level concepts - Contact pattern</dcterms:title>
         <rdfs:seeAlso rdf:resource="https://www.iso.org/standard/80742.html"/>
         <dcterms:bibliographicCitation>ISO/IEC 5087-2:2024</dcterms:bibliographicCitation>
-    	<skos:definition>This ontology specifies the city-level concepts for the city pattern of the city data model. The City pattern captures basic information about the geospatial aspects of the city.  In particular it represents the different ways in which the city is administratively divided.</skos:definition>
+    	<skos:definition>This ontology specifies the city-level concepts for the contact pattern of the city data model.</skos:definition>
     	<vann:preferredNamespaceUri>https://w3id.org/isoiec5087-2/v1/</vann:preferredNamespaceUri>
     	<vann:preferredNamespacePrefix>cdm2</vann:preferredNamespacePrefix>
 
@@ -26,7 +26,7 @@
         <dcterms:creator>Mark Fox</dcterms:creator>
     	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024</dcterms:issued> <!-- Date of the source document, comment out if draft -->
-        <owl:priorVersion rdf:resource="https://w3id.org/isoiec5087-2/v1/City/"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/isoiec5087-2/v1/Contact/"/>
         <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-11</owl:priorVersion> <!-- Date of prior ontology file, if any -->
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-08</dcterms:modified> <!-- Date of this ontology file -->
         <owl:versionInfo>1.3.0</owl:versionInfo>
@@ -58,13 +58,6 @@
     </owl:ObjectProperty>
     
 
-    <!-- https://w3id.org/isoiec5087-2/v1/OperatingObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/OperatingObjectProperty">
-        <skos:definition>Added for organizational purposes, to identify object properties defined for operations in the City-level CDM ontology.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityObjectProperty"/>
-    </owl:ObjectProperty>
-    
     <!-- https://w3id.org/isoiec5087-2/v1/AddressProperty -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/AddressProperty">
@@ -288,17 +281,6 @@
     </owl:DatatypeProperty>
     
 
-    <!-- https://w3id.org/isoiec5087-2/v1/hasClosingTime -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasClosingTime">
-        <rdfs:definition>Specifies the closing time for the domain object.</rdfs:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-1/v1/endTime"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
-        <rdfs:label xml:lang="en">has Closing Time</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
     <!-- https://w3id.org/isoiec5087-2/v1/hasCountryCode -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasCountryCode">
@@ -326,7 +308,7 @@
     <!-- Issue: hasEmail is defined in ISO/IEC 5087-2 but is never used. It is only used in this document as a super-type of personal and work email properties, which are never used.  -->
     <!-- Issue: ISO/IEC 5087 defines it as a simple string, but we should provide more logic as I have proposed here. -->
 
-    <rdf:Description rdf:about="https://w3id.org/isoiec5087-2/v1/emailAddress">
+    <rdf:Description rdf:about="https://w3id.org/isoiec5087-2/v1/EmailAddress">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
         <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <owl:withRestrictions rdf:parseType="Collection">
@@ -342,7 +324,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasEmail">
         <skos:definition>Identifies an email address of the organization or individual.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/PersonDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/ContactDataProperty"/>
         <rdfs:range rdf:resource="https://w3id.org/isoiec5087-2/v1/EmailAddress"/>
     </owl:DatatypeProperty>
     
@@ -355,17 +337,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">has Location</rdfs:label>
     </owl:DatatypeProperty> -->
-    
-
-    <!-- https://w3id.org/isoiec5087-2/v1/hasOpeningTime -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasOpeningTime">
-        <skos:definition>Specifies the opening time for the domain object.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-1/v1/startTime"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
-        <rdfs:label xml:lang="en">has Opening Time</rdfs:label>
-    </owl:DatatypeProperty>
     
 
     <!-- Issue: hasPersonalEmail is not defined in ISO/IEC 5087-2 and is not used in this document. Recommend deletion. -->

@@ -50,11 +50,11 @@
      -->
 
     
-    <!-- https://w3id.org/isoiec5087-2/v1/CityObjectProperty -->
+    <!-- https://w3id.org/isoiec5087-2/v1/CityPatternObjectProperty -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityObjectProperty">
+    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityPatternObjectProperty">
         <skos:definition>Added for organizational purposes, to identify object properties defined in the City-level CDM ontology.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-1/v1/CdmObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -64,7 +64,7 @@
         <skos:definition>Identifies administrative areas within the JurisdictionalArea.</skos:definition>
         <skos:note>Jurisdictional areas can have a hierarchy of administrative areas.</skos:note>
         <skos:note>Boundaries of an administrative area do not have to be distinct.</skos:note>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityPatternObjectProperty"/>
         <owl:inverseOf rdf:resource="https://w3id.org/isoiec5087-2/v1/administrativeAreaOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
         <rdfs:range rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
@@ -75,36 +75,16 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/administrativeAreaOf">
         <skos:definition>Identifies the jurisdictional area that an administrative area belongs to.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityPatternObjectProperty"/>
     </owl:ObjectProperty>
     
-
-    <!-- https://w3id.org/isoiec5087-2/v1/hasGovernment -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasGovernment">
-        <skos:definition>Identifies the GovernmentOrganization that manages the JurisdictionalArea.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityOrgObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#GovernmentOrganization"/>
-    </owl:ObjectProperty>
-    
-
-    <!-- https://w3id.org/isoiec5087-2/v1/hasLandArea -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasLandArea">
-        <skos:definition>Identifies the spatial area occupied by the JurisdictionalArea.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/LandUseObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
-        <rdfs:range rdf:resource="https://w3id.org/isoiec5087-2/v1/LandArea"/>
-    </owl:ObjectProperty>
-
 
     <!-- https://w3id.org/isoiec5087-2/v1/residentPopulation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/residentPopulation">
         <skos:definition>Number of residents of the area.</skos:definition>
         <skos:note>This number can be distinct from the population associated with the Land Area that an Administrative Area occupies. The resident population is determined based on the definition of a resident which is often times more specific than an occupant of an area.</skos:note>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityPatternObjectProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
         <rdfs:range rdf:resource="https://w3id.org/isoiec21972/v1/Population"/>
     </owl:ObjectProperty>
@@ -119,29 +99,19 @@
      -->
 
     
-    <!-- https://w3id.org/isoiec5087-2/v1/CityDataProperty -->
+    <!-- https://w3id.org/isoiec5087-2/v1/CityPatternDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityDataProperty">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/CityPatternDataProperty">
         <skos:definition>Added for organizational purposes, to identify data properties defined in the City-level ontology.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityDataProperty"/>
     </owl:DatatypeProperty>
-    
-
-    <!-- Issue: v1.2.0 called "hasPopulation" hasPopulationSize. Reverted to "hasPopulation" for consistency with ISO/IEC 5087-2. -->
-    <!-- https://w3id.org/isoiec5087-2/v1/hasPopulation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/isoiec5087-2/v1/hasPopulation">
-        <skos:definition>Specifies the number of people living in the LandArea.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/LandUseObjectProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/isoiec5087-2/v1/LandArea"/>
-        <rdfs:range rdf:resource="https://w3id.org/isoiec21972/v1/Population"/>
-    </owl:ObjectProperty>
     
 
     <!-- https://w3id.org/isoiec5087-2/v1/legalName -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/isoiec5087-2/v1/legalName">
         <skos:definition>Identifies the legal name of the domain object.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityPatternDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -155,10 +125,11 @@
      -->
 
     
-    <!-- https://w3id.org/isoiec5087-2/v1/CityThing -->
+    <!-- https://w3id.org/isoiec5087-2/v1/CityPatternThing -->
 
-    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/CityThing">
+    <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/CityPatternThing">
         <skos:definition>Added for organizational purposes, to identify classes defined in the City Services part of the City Data Model.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityThing"/>
     </owl:Class>
     
 
@@ -192,17 +163,13 @@
     </owl:Class>
     
 
+    <!-- Issue: Bylaw.owl extends this definition to support the hasBylaw property -->
+    <!-- Issue: Organization.owl extends this definition to support the hasGovernment property -->
     <!-- https://w3id.org/isoiec5087-2/v1/JurisdictionalArea -->
 
     <owl:Class rdf:about="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea">
         <skos:definition>A Jurisdictional Area is an abstract entity that is characterized not only by its location, but by the objects that occupy it (persons, buildings, etc), the governing body(s) it is subject to, and the activities that occur within it.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/isoiec5087-2/v1/CityPatternThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-2/v1/hasBylaw"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-2/v1/Bylaw"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-2/v1/administrativeArea"/>
@@ -213,12 +180,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-2/v1/administrativeAreaOf"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-2/v1/JurisdictionalArea"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/isoiec5087-2/v1/hasGovernment"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/isoiec5087-2/v1/GovernmentOrganization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
