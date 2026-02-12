@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-    <owl:Ontology rdf:about="https://w3id.org/citydata/part2/v1/Core">
+    <owl:Ontology rdf:about="https://w3id.org/citydata/part2/v1/Core/">
         <!-- Identity -->
         <dcterms:title>Information technology - City data model - Part 2: City level concepts - Core concepts</dcterms:title>
         <rdfs:seeAlso rdf:resource="https://www.iso.org/standard/80742.html"/>
@@ -26,13 +26,13 @@
         <!-- This release -->
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-12</dcterms:modified> 
         <owl:versionInfo>1.3.0</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part2/v1/Core/r3.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/citydata/part2/v1/Core/r3.0/"/>
         
         <!-- License -->
         <cc:license>http://creativecommons.org/licenses/by/4.0/</cc:license>
         
         <!-- Imports -->
-        <owl:imports rdf:resource="https://w3id.org/citydata/part1/v1/Core"/>
+        <owl:imports rdf:resource="https://w3id.org/citydata/part1/v1/Core/"/>
 
     </owl:Ontology>
     
